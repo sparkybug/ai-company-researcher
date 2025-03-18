@@ -1,0 +1,33 @@
+{
+  "title": "AI Company Researcher",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "company_name": {
+      "title": "Company Name",
+      "type": "string",
+      "description": "Name of the company to research.",
+      "editor": "textfield",
+      "default": "Apple"
+    },
+    "modelName": {
+      "title": "OpenAI model",
+      "type": "string",
+      "description": "The OpenAI model to use. Currently supported models are gpt-4o and gpt-4o-mini",
+      "enum": [
+        "gpt-4o",
+        "gpt-4o-mini"
+      ],
+      "default": "gpt-4o-mini",
+      "prefill": "gpt-4o-mini"
+    },
+    "debug": {
+      "title": "Debug",
+      "type": "boolean",
+      "description": "If enabled, the Actor will run in debug mode and produce more output.",
+      "editor": "checkbox",
+      "default": true
+    }
+  },
+  "required": ["company_name"]
+}
